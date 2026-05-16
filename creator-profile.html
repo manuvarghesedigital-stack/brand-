@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aisha K. | Pipplr Creator Profile</title>
+    <meta
+      name="description"
+      content="Pipplr public creator profile with city, niche, trust score, audience, social links, campaign history, and performance stats."
+    />
+    <link rel="stylesheet" href="creator-profile.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="brand-dashboard.html">Brand Dashboard</a>
+        <a href="creator-dashboard.html">Creator Dashboard</a>
+        <a href="academy.html">Academy</a>
+      </nav>
+      <button class="primary-button" type="button" id="inviteCreator">Invite Creator</button>
+    </header>
+
+    <main>
+      <section class="profile-hero">
+        <div class="profile-card">
+          <span class="avatar">AK</span>
+          <span class="status-pill">Verified creator</span>
+          <h1>Aisha K.</h1>
+          <p>
+            Kochi food and campus creator helping local cafes turn social attention into QR scans,
+            WhatsApp leads, store visits, and tracked coupon redemptions.
+          </p>
+          <div class="profile-actions">
+            <button class="secondary-button" type="button" id="copyProfile">Copy Profile</button>
+            <button class="secondary-button" type="button" id="messageCreator">Message</button>
+          </div>
+        </div>
+        <aside class="trust-panel">
+          <span class="eyebrow">Trust system</span>
+          <strong>98</strong>
+          <small>Verified conversions, brand ratings, payout reliability, and campaign completion.</small>
+          <div class="trust-meter"><span style="width: 98%"></span></div>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>Audience</span><strong>18.2K</strong><small>Instagram + campus reach</small></article>
+        <article><span>Engagement</span><strong>7.8%</strong><small>last 30 days</small></article>
+        <article><span>Revenue tracked</span><strong>₹2.8L</strong><small>across 9 campaigns</small></article>
+        <article><span>Conversions</span><strong>412</strong><small>leads, visits, sales</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Profile</span><h2>Creator details</h2></div></div>
+          <div class="detail-list">
+            <div><span>City</span><strong>Kochi</strong></div>
+            <div><span>Niche</span><strong>Food, cafes, student life, local events</strong></div>
+            <div><span>Languages</span><strong>English, Malayalam, Hindi</strong></div>
+            <div><span>Best for</span><strong>Store visits, coupon redemption, WhatsApp inquiries</strong></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Socials</span><h2>Connected channels</h2></div></div>
+          <div class="social-list">
+            <button type="button">Instagram · @aisha.eats</button>
+            <button type="button">YouTube · Aisha Eats Kochi</button>
+            <button type="button">TikTok · @aishakochi</button>
+          </div>
+        </article>
+
+        <article class="panel campaigns-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Campaign history</span><h2>Past performance</h2></div>
+            <span class="count-pill">9 completed</span>
+          </div>
+          <div class="campaign-table">
+            <div class="campaign-row header"><span>Campaign</span><span>Outcome</span><span>Revenue</span><span>Rating</span></div>
+            <div class="campaign-row"><a href="campaign-detail.html">UrbanBrew Weekend Pass</a><span>142 visits</span><strong>₹86K</strong><span>4.9</span></div>
+            <div class="campaign-row"><span>StudyLink UK Consults</span><span>38 leads</span><strong>₹24.7K</strong><span>4.8</span></div>
+            <div class="campaign-row"><span>Monsoon Food Trail</span><span>211 scans</span><strong>₹41K</strong><span>4.9</span></div>
+          </div>
+        </article>
+
+        <article class="panel badges-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Gamification</span><h2>Badges</h2></div></div>
+          <div class="badge-grid">
+            <div><strong>Top 5%</strong><span>Kochi food creators</span></div>
+            <div><strong>Fast payout</strong><span>No payout exceptions</span></div>
+            <div><strong>18-day streak</strong><span>Consistent promotion</span></div>
+            <div><strong>Trusted seller</strong><span>98 trust score</span></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Conversion mix</span><h2>Tracked outcomes</h2></div></div>
+          <div class="bar-chart">
+            <div style="--h: 82%"><span>QR</span></div>
+            <div style="--h: 56%"><span>Coupon</span></div>
+            <div style="--h: 72%"><span>WA</span></div>
+            <div style="--h: 48%"><span>UTM</span></div>
+            <div style="--h: 68%"><span>Visit</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="creator-profile.js"></script>
+  </body>
+</html>

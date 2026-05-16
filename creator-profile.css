@@ -1,0 +1,104 @@
+:root {
+  --bg: #f5f2ea;
+  --panel: #ffffff;
+  --soft: #faf8f2;
+  --ink: #17181c;
+  --muted: #686c72;
+  --line: rgba(23, 24, 28, .12);
+  --accent: #0f7b65;
+  --mint: #7bd9bf;
+  --gold: #d99a2b;
+  --shadow: 0 22px 60px rgba(27, 30, 34, .12);
+}
+* { box-sizing: border-box; }
+body {
+  min-width: 320px;
+  margin: 0;
+  background: radial-gradient(circle at 15% 12%, rgba(15,123,101,.16), transparent 28rem), radial-gradient(circle at 82% 10%, rgba(217,154,43,.13), transparent 24rem), var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+button { font: inherit; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+.topbar, .brand, nav, .profile-actions, .panel-heading { display: flex; align-items: center; }
+.topbar {
+  position: sticky;
+  top: 14px;
+  z-index: 5;
+  justify-content: space-between;
+  gap: 16px;
+  width: min(1180px, calc(100% - 28px));
+  min-height: 72px;
+  margin: 14px auto 0;
+  padding: 10px 12px 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+.brand { gap: 10px; font-weight: 850; }
+.brand-mark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 13px; background: var(--ink); color: var(--bg); }
+nav { gap: 20px; color: var(--muted); font-weight: 760; }
+main { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 42px 0 80px; }
+h1, h2, p { margin: 0; }
+h1 { margin-top: 14px; font-size: clamp(4rem, 10vw, 8rem); line-height: .86; }
+h2 { font-size: 1.22rem; }
+.eyebrow { display: inline-flex; gap: 8px; align-items: center; color: var(--accent); font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.eyebrow::before { width: 24px; height: 2px; border-radius: 99px; background: currentColor; content: ""; }
+.profile-hero { display: grid; grid-template-columns: minmax(0,1fr) 360px; gap: 18px; }
+.profile-card, .trust-panel, .metric-grid article, .panel {
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 14px 34px rgba(27,30,34,.08);
+}
+.profile-card { padding: 28px; }
+.avatar { display: grid; width: 82px; height: 82px; place-items: center; border-radius: 26px; background: var(--ink); color: var(--bg); font-size: 1.8rem; font-weight: 850; }
+.status-pill, .count-pill { display: inline-flex; align-items: center; width: max-content; min-height: 32px; margin-top: 18px; padding: 0 12px; border-radius: 999px; background: rgba(15,123,101,.13); color: var(--accent); font-size: .78rem; font-weight: 850; }
+.profile-card p { max-width: 720px; margin-top: 20px; color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
+.profile-actions { flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.primary-button, .secondary-button, .social-list button {
+  min-height: 42px; border-radius: 999px; font-weight: 850;
+}
+.primary-button { border: 0; padding: 0 18px; background: var(--ink); color: var(--bg); }
+.secondary-button, .social-list button { border: 1px solid var(--line); padding: 0 16px; background: var(--panel); color: var(--ink); }
+.trust-panel { display: flex; flex-direction: column; justify-content: end; padding: 24px; }
+.trust-panel strong { display: block; margin-top: 12px; font-size: 5rem; line-height: .9; }
+.trust-panel small, .metric-grid span, .metric-grid small, .detail-list span, .badge-grid span { color: var(--muted); font-size: .84rem; line-height: 1.45; }
+.trust-meter { height: 10px; margin-top: 20px; overflow: hidden; border-radius: 999px; background: rgba(104,108,114,.14); }
+.trust-meter span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--gold)); }
+.metric-grid, .content-grid, .detail-list, .social-list, .badge-grid { display: grid; gap: 14px; }
+.metric-grid { grid-template-columns: repeat(4,1fr); margin-top: 18px; }
+.metric-grid article, .panel { padding: 22px; }
+.metric-grid strong { display: block; margin-top: 8px; font-size: clamp(1.7rem, 3vw, 2.8rem); line-height: 1; }
+.content-grid { grid-template-columns: 1fr 1fr .9fr; margin-top: 18px; }
+.campaigns-panel { grid-column: span 2; }
+.badges-panel, .chart-panel { grid-row: span 2; }
+.panel-heading { justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.detail-list div, .badge-grid div { padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--soft); }
+.detail-list strong, .badge-grid strong { display: block; margin-top: 5px; }
+.social-list button { min-height: 52px; border-radius: 16px; text-align: left; }
+.campaign-table { display: grid; gap: 8px; }
+.campaign-row { display: grid; grid-template-columns: 1.2fr .9fr .7fr .5fr; gap: 12px; align-items: center; min-height: 54px; padding: 0 14px; border: 1px solid var(--line); border-radius: 16px; background: var(--soft); }
+.campaign-row.header { min-height: 38px; color: var(--muted); font-size: .78rem; font-weight: 850; text-transform: uppercase; }
+.campaign-row a { color: var(--accent); font-weight: 850; }
+.badge-grid { grid-template-columns: repeat(2,1fr); }
+.bar-chart { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; align-items: end; height: 280px; }
+.bar-chart div { display: flex; align-items: end; justify-content: center; height: var(--h); min-height: 56px; border-radius: 18px 18px 8px 8px; background: linear-gradient(180deg, var(--mint), var(--gold)); }
+.bar-chart span { margin-bottom: 10px; color: var(--ink); font-weight: 850; }
+.toast { position: fixed; right: 20px; bottom: 20px; z-index: 8; max-width: min(360px, calc(100% - 40px)); padding: 14px 16px; border: 1px solid var(--line); border-radius: 16px; background: var(--ink); color: var(--bg); box-shadow: var(--shadow); font-weight: 850; }
+.toast[hidden] { display: none; }
+@media (max-width: 960px) {
+  .topbar { position: static; display: grid; border-radius: 26px; }
+  nav { flex-wrap: wrap; }
+  .profile-hero, .content-grid { grid-template-columns: 1fr; }
+  .campaigns-panel { grid-column: span 1; }
+  .metric-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 620px) {
+  h1 { font-size: clamp(3.7rem, 20vw, 5.3rem); }
+  .metric-grid, .badge-grid { grid-template-columns: 1fr; }
+  .campaign-row, .campaign-row.header { grid-template-columns: 1fr; padding: 14px; }
+  .primary-button, .secondary-button { width: 100%; }
+}

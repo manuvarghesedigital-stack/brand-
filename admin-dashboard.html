@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Admin Dashboard</title>
+    <meta
+      name="description"
+      content="Pipplr admin dashboard for creator approvals, brand verification, conversion review, payout exceptions, and city network management."
+    />
+    <link rel="stylesheet" href="admin-dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a class="active" href="#queue">Review Queue</a>
+        <a href="#conversions">Conversions</a>
+        <a href="payouts.html">Payouts</a>
+        <a href="city-network.html">Cities</a>
+      </nav>
+      <div class="admin-card">
+        <span>Admin mode</span>
+        <strong>Trust Ops</strong>
+        <small>Verification and payout control</small>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Admin dashboard</span>
+          <h1>Trust Operations</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="secondary-button" href="brand-dashboard.html">Brand View</a>
+          <a class="secondary-button" href="creator-dashboard.html">Creator View</a>
+        </div>
+      </header>
+
+      <section class="metric-grid">
+        <article><span>Pending creators</span><strong>32</strong><small>awaiting review</small></article>
+        <article><span>Conversion queue</span><strong>118</strong><small>offline verification</small></article>
+        <article><span>Payout exceptions</span><strong>7</strong><small>needs ops action</small></article>
+        <article><span>Active cities</span><strong>8</strong><small>India, UK, Europe</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel queue-panel" id="queue">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Review queue</span><h2>Creators and brands</h2></div>
+            <span class="count-pill">45 pending</span>
+          </div>
+          <div class="review-list">
+            <div>
+              <strong>Aisha K. · Creator</strong>
+              <span>Kochi · Food · Instagram connected · Trust check passed</span>
+              <div><button type="button">Approve</button><button type="button">Flag</button></div>
+            </div>
+            <div>
+              <strong>UrbanBrew Kochi · Brand</strong>
+              <span>Cafe · GST pending · payout account verified</span>
+              <div><button type="button">Approve</button><button type="button">Flag</button></div>
+            </div>
+            <div>
+              <strong>Pioneer Growth · Agency</strong>
+              <span>8 brands · Kochi/Bangalore/London · docs uploaded</span>
+              <div><button type="button">Approve</button><button type="button">Flag</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel conversion-panel" id="conversions">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Conversions</span><h2>Verify attribution</h2></div>
+          </div>
+          <div class="conversion-list">
+            <div><strong>Bill #UB-2841</strong><span>QR + coupon · Aisha K. · ₹1,840</span><button type="button">Verify</button></div>
+            <div><strong>Lead #ST-492</strong><span>WhatsApp · StudyLink · Dev N.</span><button type="button">Verify</button></div>
+            <div><strong>Visit #GY-811</strong><span>Gym walk-in · Hyderabad · Arjun S.</span><button type="button">Verify</button></div>
+          </div>
+        </article>
+
+        <article class="panel payout-panel" id="payouts">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Payouts</span><h2>Exceptions</h2></div>
+            <span class="count-pill">7 open</span>
+          </div>
+          <div class="payout-list">
+            <div><span>Duplicate coupon claim</span><strong>₹4,820</strong><button type="button">Resolve</button></div>
+            <div><span>Missing bill image</span><strong>₹1,200</strong><button type="button">Resolve</button></div>
+            <div><span>Brand confirmation pending</span><strong>₹8,640</strong><button type="button">Resolve</button></div>
+          </div>
+        </article>
+
+        <article class="panel city-panel" id="cities">
+          <div class="panel-heading">
+            <div><span class="eyebrow">City networks</span><h2>Market health</h2></div>
+          </div>
+          <div class="city-table">
+            <div><span>Kochi</span><strong>124 creators</strong><small>31 campaigns · healthy</small></div>
+            <div><span>Bangalore</span><strong>186 creators</strong><small>42 campaigns · healthy</small></div>
+            <div><span>London</span><strong>104 creators</strong><small>29 campaigns · needs brand supply</small></div>
+            <div><span>Berlin</span><strong>76 creators</strong><small>22 campaigns · growing</small></div>
+          </div>
+        </article>
+
+        <article class="panel audit-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Audit log</span><h2>Recent ops actions</h2></div>
+          </div>
+          <div class="audit-list" id="auditList">
+            <div>System ready for review.</div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>

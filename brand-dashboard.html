@@ -16,6 +16,7 @@
         <span class="brand-mark">P</span>
         <span>Pipplr</span>
       </a>
+      <a class="workspace-link" href="auth.html">Switch workspace</a>
       <nav>
         <a class="active" href="#overview">Overview</a>
         <a href="#campaigns">Campaigns</a>
@@ -37,16 +38,20 @@
           <h1>Campaign Command Center</h1>
         </div>
         <div class="topbar-actions">
-          <button class="icon-button" type="button" aria-label="Search dashboard" title="Search"></button>
-          <button class="secondary-button" type="button">Export Report</button>
-          <button class="primary-button" type="button" id="newCampaign">New Campaign</button>
+          <button class="icon-button" type="button" aria-label="Search dashboard" title="Search" id="searchDashboard"></button>
+          <a class="secondary-button" href="admin-dashboard.html">Admin</a>
+          <a class="secondary-button" href="agency-dashboard.html">Agency</a>
+          <a class="secondary-button" href="analytics.html">Analytics</a>
+          <a class="secondary-button" href="settings.html">Settings</a>
+          <button class="secondary-button" type="button" id="exportReport">Export Report</button>
+          <a class="primary-button" href="campaign-wizard.html">New Campaign</a>
         </div>
       </header>
 
       <section class="hero-band" id="overview">
         <div>
           <span class="status-pill">Live campaign</span>
-          <h2>Cafe Weekend Pass</h2>
+          <h2><a href="campaign-detail.html">Cafe Weekend Pass</a></h2>
           <p>
             94 approved creators are driving QR scans, coupon redemptions, WhatsApp leads, and store visits
             across Kochi and Thrissur.
@@ -125,7 +130,7 @@
               <span class="eyebrow">Attribution</span>
               <h3>Conversions by channel</h3>
             </div>
-            <button class="text-button" type="button">This week</button>
+            <button class="text-button" type="button" id="dateRange">This week</button>
           </div>
           <div class="bar-chart" aria-label="Conversions by channel chart">
             <div style="--h: 72%"><span>QR</span></div>
@@ -147,7 +152,7 @@
           <div class="creator-list">
             <div class="creator-row">
               <span class="avatar">AK</span>
-              <div><strong>Aisha K.</strong><small>Kochi · Food · 18.2K audience</small></div>
+              <div><a href="creator-profile.html"><strong>Aisha K.</strong></a><small>Kochi · Food · 18.2K audience</small></div>
               <button type="button">Approve</button>
             </div>
             <div class="creator-row">
@@ -179,7 +184,7 @@
             <div>
               <strong>PIP-URBAN-24</strong>
               <small>QR, coupon, UTM, and WhatsApp link generated per creator.</small>
-              <button class="secondary-button" type="button">Generate Batch</button>
+              <button class="secondary-button" type="button" id="generateBatch">Generate Batch</button>
             </div>
           </div>
         </article>
@@ -207,13 +212,13 @@
             </div>
             <span class="status-pill">Ready</span>
           </div>
-          <div class="payout-total">
+          <a class="payout-total" href="payouts.html">
             <span>Approved for payout</span>
             <strong>₹92,450</strong>
-          </div>
+          </a>
           <div class="payout-actions">
-            <button class="primary-button" type="button">Approve Payouts</button>
-            <button class="secondary-button" type="button">Review Exceptions</button>
+            <button class="primary-button" type="button" id="approvePayouts">Approve Payouts</button>
+            <button class="secondary-button" type="button" id="reviewExceptions">Review Exceptions</button>
           </div>
         </article>
       </section>
@@ -231,8 +236,11 @@
           <button value="visit">Store visits</button>
           <button value="whatsapp">WhatsApp inquiries</button>
         </div>
+        <p class="dialog-note" aria-live="polite"></p>
       </form>
     </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
     <script src="dashboard.js"></script>
   </body>

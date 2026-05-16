@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Creator Dashboard</title>
+    <meta
+      name="description"
+      content="Pipplr creator dashboard for campaign discovery, creator earnings, tracking links, wallet, payouts, trust score, and local leaderboards."
+    />
+    <link rel="stylesheet" href="creator-dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar" aria-label="Creator dashboard navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">P</span>
+        <span>Pipplr</span>
+      </a>
+      <a class="workspace-link" href="auth.html">Switch workspace</a>
+      <div class="profile-card">
+        <span class="avatar">AK</span>
+        <strong>Aisha K.</strong>
+        <small>Kochi · Food creator · Level 7</small>
+      </div>
+      <nav>
+        <a class="active" href="#overview">Overview</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#tracking">Tracking</a>
+        <a href="#wallet">Wallet</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="academy.html">Academy</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="trust-card">
+        <span>Trust score</span>
+        <strong>98</strong>
+        <small>Verified conversions, brand ratings, and payout history</small>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Creator dashboard</span>
+          <h1>Earn From Local Influence</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="secondary-button" type="button" id="shareProfile">Share Profile</button>
+          <button class="primary-button" type="button" id="discoverCampaign">Find Campaigns</button>
+        </div>
+      </header>
+
+      <section class="hero-band" id="overview">
+        <div>
+          <span class="status-pill">3 active campaigns</span>
+          <h2>₹42,850 earned this month</h2>
+          <p>
+            Your QR scans, coupon redemptions, WhatsApp leads, and store visits are being tracked across
+            cafe, travel, and study abroad campaigns.
+          </p>
+        </div>
+        <div class="earnings-card">
+          <span>Next payout</span>
+          <strong>₹18,420</strong>
+          <small>Expected Friday after brand approval</small>
+          <div class="progress"><span style="width: 78%"></span></div>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="Creator performance metrics">
+        <article><span>QR scans</span><strong>1,284</strong><small>+22% this week</small></article>
+        <article><span>Leads</span><strong>316</strong><small>WhatsApp + forms</small></article>
+        <article><span>Conversions</span><strong>94</strong><small>sales and visits</small></article>
+        <article><span>Streak</span><strong>18 days</strong><small>campaign activity</small></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel campaign-panel" id="campaigns">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Campaign discovery</span>
+              <h3>Recommended campaigns</h3>
+            </div>
+            <span class="count-pill">8 matches</span>
+          </div>
+          <div class="campaign-list">
+            <div class="campaign-row">
+              <div>
+                <a href="campaign-detail.html"><strong>UrbanBrew Weekend Pass</strong></a>
+                <small>Kochi · Food · 12% commission</small>
+              </div>
+              <button type="button">Apply</button>
+            </div>
+            <div class="campaign-row">
+              <div>
+                <strong>StudyLink UK Consults</strong>
+                <small>Kochi · Education · ₹650 per verified lead</small>
+              </div>
+              <button type="button">Apply</button>
+            </div>
+            <div class="campaign-row">
+              <div>
+                <strong>Monsoon Travel Tours</strong>
+                <small>Kerala · Travel · 8% booking commission</small>
+              </div>
+              <button type="button">Apply</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel tracking-panel" id="tracking">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Tracking kit</span>
+              <h3>Your creator codes</h3>
+            </div>
+          </div>
+          <div class="tracking-kit">
+            <div class="qr-code" aria-label="Creator QR code preview">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div>
+              <a href="scan.html"><strong>AISHA-KOCHI-24</strong></a>
+              <small>QR code, coupon, UTM link, and WhatsApp CTA mapped to your profile.</small>
+              <button class="secondary-button copy-code" type="button">Copy Link</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel wallet-panel" id="wallet">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Wallet</span>
+              <h3>Payout status</h3>
+            </div>
+            <span class="status-pill">Verified</span>
+          </div>
+          <a class="wallet-total" href="payouts.html">
+            <span>Available balance</span>
+            <strong>₹24,430</strong>
+          </a>
+          <div class="wallet-list">
+            <div><span>Pending</span><strong>₹18,420</strong></div>
+            <div><span>Paid out</span><strong>₹1.86L</strong></div>
+            <div><span>Rejected</span><strong>₹0</strong></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Performance</span>
+              <h3>Conversions this week</h3>
+            </div>
+          </div>
+          <div class="bar-chart" aria-label="Creator weekly conversion chart">
+            <div style="--h: 42%"><span>Mon</span></div>
+            <div style="--h: 58%"><span>Tue</span></div>
+            <div style="--h: 51%"><span>Wed</span></div>
+            <div style="--h: 74%"><span>Thu</span></div>
+            <div style="--h: 88%"><span>Fri</span></div>
+            <div style="--h: 69%"><span>Sat</span></div>
+            <div style="--h: 62%"><span>Sun</span></div>
+          </div>
+        </article>
+
+        <article class="panel achievement-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Gamification</span>
+              <h3>Badges and levels</h3>
+            </div>
+          </div>
+          <div class="badge-grid">
+            <div><span>Top 5%</span><small>Kochi food creators</small></div>
+            <div><span>18-day streak</span><small>Daily campaign activity</small></div>
+            <div><span>Trusted seller</span><small>98 trust score</small></div>
+            <div><span>Fast payout</span><small>No exceptions</small></div>
+          </div>
+        </article>
+
+        <article class="panel leaderboard-panel" id="leaderboard">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Leaderboard</span>
+              <h3>Kochi creators</h3>
+            </div>
+          </div>
+          <div class="leaderboard">
+            <div class="leaderboard-row active"><span>1</span><a href="creator-profile.html"><strong>Aisha K.</strong></a><small>₹42.8K</small></div>
+            <div class="leaderboard-row"><span>2</span><strong>Nikhil P.</strong><small>₹36.2K</small></div>
+            <div class="leaderboard-row"><span>3</span><strong>Riya M.</strong><small>₹31.9K</small></div>
+            <div class="leaderboard-row"><span>4</span><strong>Farhan S.</strong><small>₹28.4K</small></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="campaign-dialog" id="campaignDialog">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Close campaign discovery dialog"></button>
+        <span class="eyebrow">Campaign matches</span>
+        <h2>New opportunities</h2>
+        <p>These campaigns match your city, niche, language, and trust score.</p>
+        <div class="dialog-options">
+          <button value="food">Food and cafe offers</button>
+          <button value="education">Study abroad leads</button>
+          <button value="travel">Travel bookings</button>
+          <button value="events">Campus events</button>
+        </div>
+        <p class="dialog-note" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="creator-dashboard.js"></script>
+  </body>
+</html>

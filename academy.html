@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Creator Academy</title>
+    <meta
+      name="description"
+      content="Pipplr Creator Academy with lessons, playbooks, certification, trust score guidance, and creator commerce training."
+    />
+    <link rel="stylesheet" href="academy.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="creator-dashboard.html">Creator</a>
+        <a href="creator-profile.html">Profile</a>
+        <a href="campaign-detail.html">Campaign</a>
+      </nav>
+      <button class="primary-button" type="button" id="startCourse">Start Course</button>
+    </header>
+
+    <main>
+      <section class="academy-hero">
+        <div>
+          <span class="eyebrow">Creator academy</span>
+          <h1>Learn how to turn local influence into measurable revenue.</h1>
+          <p>
+            Training for creators on campaign quality, QR usage, coupon attribution, WhatsApp leads,
+            brand trust, compliance, and payout readiness.
+          </p>
+        </div>
+        <aside class="progress-card">
+          <span>Certification progress</span>
+          <strong id="progressValue">42%</strong>
+          <small>3 of 7 lessons completed</small>
+          <div class="meter"><span id="progressBar" style="width: 42%"></span></div>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>Lessons</span><strong>7</strong><small>creator commerce basics</small></article>
+        <article><span>Playbooks</span><strong>12</strong><small>campaign templates</small></article>
+        <article><span>Trust boost</span><strong>+8</strong><small>after certification</small></article>
+        <article><span>Certified creators</span><strong>248</strong><small>across city networks</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel lesson-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Lessons</span><h2>Creator certification path</h2></div>
+            <span class="count-pill">7 modules</span>
+          </div>
+          <div class="lesson-list">
+            <div><strong>1. Performance creator basics</strong><span>Completed</span><button type="button">Review</button></div>
+            <div><strong>2. QR and coupon attribution</strong><span>Completed</span><button type="button">Review</button></div>
+            <div><strong>3. WhatsApp lead quality</strong><span>In progress</span><button type="button">Continue</button></div>
+            <div><strong>4. Brand-safe content</strong><span>Locked</span><button type="button">Unlock</button></div>
+            <div><strong>5. Payout rules and disputes</strong><span>Locked</span><button type="button">Unlock</button></div>
+          </div>
+        </article>
+
+        <article class="panel playbook-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Playbooks</span><h2>Campaign templates</h2></div></div>
+          <div class="playbook-list">
+            <button type="button">Cafe visit story script</button>
+            <button type="button">Study abroad lead checklist</button>
+            <button type="button">Gym membership referral flow</button>
+            <button type="button">Travel booking content pack</button>
+          </div>
+        </article>
+
+        <article class="panel trust-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Trust score</span><h2>How to improve</h2></div></div>
+          <div class="trust-list">
+            <div><span>Complete campaigns</span><strong>+3 score</strong></div>
+            <div><span>Submit valid proofs</span><strong>+2 score</strong></div>
+            <div><span>Maintain payout accuracy</span><strong>+2 score</strong></div>
+            <div><span>Get brand ratings</span><strong>+1 score</strong></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="academy.js"></script>
+  </body>
+</html>

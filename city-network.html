@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr City Network</title>
+    <meta
+      name="description"
+      content="Pipplr city network view for creator supply, campaign demand, niches, revenue tracked, and local market expansion."
+    />
+    <link rel="stylesheet" href="city-network.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="brand-dashboard.html">Brand</a>
+        <a href="agency-dashboard.html">Agency</a>
+        <a href="admin-dashboard.html">Admin</a>
+      </nav>
+      <button class="primary-button" type="button" id="launchCity">Launch City</button>
+    </header>
+
+    <main>
+      <section class="city-hero">
+        <div>
+          <span class="eyebrow">City network</span>
+          <h1>Local creator economies, tracked city by city.</h1>
+          <p>
+            Compare creator supply, campaign demand, niches, revenue, and expansion readiness across
+            India, the UK, and Europe.
+          </p>
+        </div>
+        <aside class="city-card">
+          <span class="status-pill">Selected city</span>
+          <h2 id="selectedCity">Kochi</h2>
+          <p id="selectedSummary">Cafe, study abroad, food, and campus campaigns are strongest here.</p>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>Creators</span><strong id="metricCreators">124</strong><small>verified supply</small></article>
+        <article><span>Campaigns</span><strong id="metricCampaigns">31</strong><small>active demand</small></article>
+        <article><span>Revenue</span><strong id="metricRevenue">₹3.1L</strong><small>tracked this month</small></article>
+        <article><span>Health</span><strong id="metricHealth">High</strong><small>market readiness</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel map-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Markets</span><h2>Choose a city</h2></div></div>
+          <label class="city-select-label">
+            Quick select
+            <select id="citySelect">
+              <option>Kochi</option>
+              <option>Bangalore</option>
+              <option>Hyderabad</option>
+              <option>London</option>
+              <option>Berlin</option>
+              <option>Dublin</option>
+              <option>Calicut</option>
+              <option>Thrissur</option>
+            </select>
+          </label>
+          <div class="city-grid">
+            <button class="active" type="button" data-city="Kochi">Kochi</button>
+            <button type="button" data-city="Bangalore">Bangalore</button>
+            <button type="button" data-city="Hyderabad">Hyderabad</button>
+            <button type="button" data-city="London">London</button>
+            <button type="button" data-city="Berlin">Berlin</button>
+            <button type="button" data-city="Dublin">Dublin</button>
+            <button type="button" data-city="Calicut">Calicut</button>
+            <button type="button" data-city="Thrissur">Thrissur</button>
+          </div>
+        </article>
+
+        <article class="panel niche-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Niches</span><h2>Top creator categories</h2></div></div>
+          <div class="niche-list" id="nicheList"></div>
+        </article>
+
+        <article class="panel supply-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Supply</span><h2>Creator recruiting</h2></div>
+            <button class="text-button" type="button" id="recruitCreators">Recruit</button>
+          </div>
+          <div class="supply-list">
+            <div><span>Nano creators</span><strong id="nanoCreators">84</strong></div>
+            <div><span>Campus ambassadors</span><strong id="campusCreators">26</strong></div>
+            <div><span>Sales partners</span><strong id="salesPartners">14</strong></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Performance</span><h2>City channel mix</h2></div></div>
+          <div class="bar-chart">
+            <div style="--h: 82%"><span>QR</span></div>
+            <div style="--h: 64%"><span>Coupon</span></div>
+            <div style="--h: 76%"><span>WA</span></div>
+            <div style="--h: 48%"><span>UTM</span></div>
+            <div style="--h: 69%"><span>Visit</span></div>
+          </div>
+        </article>
+
+        <article class="panel campaign-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Campaign demand</span><h2>Best next campaigns</h2></div></div>
+          <div class="campaign-list" id="campaignList"></div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="city-network.js"></script>
+  </body>
+</html>

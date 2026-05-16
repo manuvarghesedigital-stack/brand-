@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Agency Dashboard</title>
+    <meta
+      name="description"
+      content="Pipplr agency dashboard for managing multiple brands, city creator networks, campaign ROI, and creator recruitment."
+    />
+    <link rel="stylesheet" href="agency-dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <a class="workspace-link" href="auth.html">Switch workspace</a>
+      <nav>
+        <a class="active" href="#portfolio">Portfolio</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#recruiting">Recruiting</a>
+        <a href="city-network.html">Cities</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="agency-card">
+        <span>Agency</span>
+        <strong>Pioneer Growth</strong>
+        <small>8 brands · 4 active cities</small>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Agency dashboard</span>
+          <h1>Multi-Brand Growth Ops</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="secondary-button" type="button" id="inviteBrand">Invite Brand</button>
+          <a class="primary-button" href="campaign-wizard.html">Create Campaign</a>
+        </div>
+      </header>
+
+      <section class="metric-grid">
+        <article><span>Managed brands</span><strong>8</strong><small>4 active this week</small></article>
+        <article><span>Revenue tracked</span><strong>₹42.6L</strong><small>portfolio total</small></article>
+        <article><span>Creators recruited</span><strong>486</strong><small>across 8 cities</small></article>
+        <article><span>Portfolio ROAS</span><strong>4.9x</strong><small>creator payouts included</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel portfolio-panel" id="portfolio">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Brand portfolio</span><h2>Accounts managed</h2></div>
+            <span class="count-pill">8 brands</span>
+          </div>
+          <div class="brand-table">
+            <div class="brand-row header"><span>Brand</span><span>City</span><span>ROI</span><span>Status</span></div>
+            <div class="brand-row"><a href="brand-dashboard.html">UrbanBrew</a><span>Kochi</span><strong>5.3x</strong><button type="button">Open</button></div>
+            <div class="brand-row"><span>StudyLink</span><span>London</span><strong>4.1x</strong><button type="button">Open</button></div>
+            <div class="brand-row"><span>FitCore</span><span>Hyderabad</span><strong>3.8x</strong><button type="button">Open</button></div>
+            <div class="brand-row"><span>TravelNest</span><span>Dublin</span><strong>4.6x</strong><button type="button">Open</button></div>
+          </div>
+        </article>
+
+        <article class="panel campaigns-panel" id="campaigns">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Campaigns</span><h2>Performance overview</h2></div>
+          </div>
+          <div class="campaign-list">
+            <div><a href="campaign-detail.html">UrbanBrew Weekend Pass</a><span>₹8.4L revenue · 94 creators</span></div>
+            <div><strong>Study Abroad Lead Sprint</strong><span>412 leads · 38 creators</span></div>
+            <div><strong>Gym Membership Push</strong><span>168 sales · 52 creators</span></div>
+          </div>
+        </article>
+
+        <article class="panel recruiting-panel" id="recruiting">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Creator recruiting</span><h2>Pipeline</h2></div>
+            <button class="text-button" type="button" id="autoMatch">Auto Match</button>
+          </div>
+          <div class="recruit-list">
+            <div><span>Food creators</span><strong>82 matched</strong><button type="button">Invite Batch</button></div>
+            <div><span>Campus ambassadors</span><strong>146 matched</strong><button type="button">Invite Batch</button></div>
+            <div><span>Travel creators</span><strong>54 matched</strong><button type="button">Invite Batch</button></div>
+          </div>
+        </article>
+
+        <article class="panel city-panel" id="cities">
+          <div class="panel-heading">
+            <div><span class="eyebrow">City networks</span><h2>Supply and demand</h2></div>
+          </div>
+          <div class="city-table">
+            <div><span>Kochi</span><strong>High supply</strong><small>Needs premium cafe campaigns</small></div>
+            <div><span>Bangalore</span><strong>Balanced</strong><small>Fashion and campus moving well</small></div>
+            <div><span>London</span><strong>Low supply</strong><small>Recruit student creators</small></div>
+            <div><span>Berlin</span><strong>Growing</strong><small>Events and food strongest</small></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading"><div><span class="eyebrow">ROI</span><h2>Portfolio performance</h2></div></div>
+          <div class="bar-chart">
+            <div style="--h: 84%"><span>Kochi</span></div>
+            <div style="--h: 72%"><span>BLR</span></div>
+            <div style="--h: 58%"><span>Hyd</span></div>
+            <div style="--h: 68%"><span>LDN</span></div>
+            <div style="--h: 61%"><span>BER</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="agency-dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Payouts & Wallet</title>
+    <meta
+      name="description"
+      content="Pipplr payouts and wallet page for creator commissions, brand approvals, settlement history, payout exceptions, and payment methods."
+    />
+    <link rel="stylesheet" href="payouts.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="creator-dashboard.html">Creator</a>
+        <a href="brand-dashboard.html">Brand</a>
+        <a href="admin-dashboard.html">Admin</a>
+      </nav>
+      <button class="primary-button" type="button" id="requestPayout">Request Payout</button>
+    </header>
+
+    <main>
+      <section class="wallet-hero">
+        <div>
+          <span class="eyebrow">Payouts and wallet</span>
+          <h1>Creator earnings, brand approvals, and settlements.</h1>
+          <p>
+            Track pending commissions, approved payouts, brand verification, failed settlements, and payment
+            methods in one trust layer.
+          </p>
+        </div>
+        <aside class="balance-card">
+          <span>Available balance</span>
+          <strong>₹24,430</strong>
+          <small>Next settlement Friday</small>
+          <div class="meter"><span style="width: 72%"></span></div>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>Pending</span><strong>₹18,420</strong><small>awaiting brand approval</small></article>
+        <article><span>Approved</span><strong>₹24,430</strong><small>ready to settle</small></article>
+        <article><span>Paid out</span><strong>₹1.86L</strong><small>lifetime creator wallet</small></article>
+        <article><span>Exceptions</span><strong>2</strong><small>needs review</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel ledger-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Ledger</span><h2>Commission history</h2></div>
+            <span class="count-pill">12 entries</span>
+          </div>
+          <div class="ledger-table">
+            <div class="ledger-row header"><span>Campaign</span><span>Type</span><span>Amount</span><span>Status</span></div>
+            <div class="ledger-row"><a href="campaign-detail.html">UrbanBrew Weekend Pass</a><span>Coupon + visit</span><strong>₹8,420</strong><button type="button">Approve</button></div>
+            <div class="ledger-row"><span>StudyLink UK Consults</span><span>Verified lead</span><strong>₹6,500</strong><button type="button">Approve</button></div>
+            <div class="ledger-row"><span>Monsoon Food Trail</span><span>QR visit</span><strong>₹3,500</strong><button type="button">Approve</button></div>
+          </div>
+        </article>
+
+        <article class="panel method-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Payment method</span><h2>Settlement account</h2></div></div>
+          <div class="method-card">
+            <span>UPI</span>
+            <strong>aisha@upi</strong>
+            <small>Verified · Razorpay-ready</small>
+            <button class="secondary-button" type="button" id="changeMethod">Change Method</button>
+          </div>
+        </article>
+
+        <article class="panel exception-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Exceptions</span><h2>Needs attention</h2></div>
+            <span class="count-pill">2 open</span>
+          </div>
+          <div class="exception-list">
+            <div><strong>Missing bill image</strong><span>UrbanBrew · ₹1,200</span><button type="button">Resolve</button></div>
+            <div><strong>Duplicate coupon claim</strong><span>Food Trail · ₹860</span><button type="button">Resolve</button></div>
+          </div>
+        </article>
+
+        <article class="panel schedule-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Schedule</span><h2>Settlement timeline</h2></div></div>
+          <div class="timeline">
+            <div><span>Today</span><strong>Brand verification</strong></div>
+            <div><span>Thursday</span><strong>Admin exception review</strong></div>
+            <div><span>Friday</span><strong>Creator payout settlement</strong></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="payouts.js"></script>
+  </body>
+</html>

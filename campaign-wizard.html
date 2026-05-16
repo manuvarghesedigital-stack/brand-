@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Campaign | Pipplr</title>
+    <meta
+      name="description"
+      content="Create a Pipplr creator commerce campaign with objective, city, payout rules, tracking methods, assets, and launch review."
+    />
+    <link rel="stylesheet" href="campaign-wizard.css" />
+  </head>
+  <body>
+    <main class="wizard-shell">
+      <aside class="wizard-aside">
+        <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+        <div>
+          <span class="eyebrow">Campaign wizard</span>
+          <h1>Launch in minutes.</h1>
+          <p>Define the outcome, city, payout, creators, and attribution stack before publishing.</p>
+        </div>
+        <ol class="step-list">
+          <li class="active" data-step-indicator="1">Objective</li>
+          <li data-step-indicator="2">Market</li>
+          <li data-step-indicator="3">Payout</li>
+          <li data-step-indicator="4">Tracking</li>
+          <li data-step-indicator="5">Review</li>
+        </ol>
+      </aside>
+
+      <section class="wizard-card">
+        <form id="campaignForm">
+          <section class="wizard-step active" data-step="1">
+            <span class="eyebrow">Step 1</span>
+            <h2>What outcome should creators drive?</h2>
+            <div class="option-grid">
+              <button type="button" data-choice="objective" data-value="Store visits">Store visits</button>
+              <button type="button" data-choice="objective" data-value="Coupon redemptions">Coupon redemptions</button>
+              <button type="button" data-choice="objective" data-value="WhatsApp leads">WhatsApp leads</button>
+              <button type="button" data-choice="objective" data-value="Sales">Sales</button>
+            </div>
+          </section>
+
+          <section class="wizard-step" data-step="2">
+            <span class="eyebrow">Step 2</span>
+            <h2>Choose city and creator niche.</h2>
+            <div class="form-grid">
+              <label>Campaign city<input name="city" value="Kochi" /></label>
+              <label>Creator niche<input name="niche" value="Food creators, campus ambassadors" /></label>
+              <label>Creator count<input name="creatorCount" value="50" /></label>
+            </div>
+          </section>
+
+          <section class="wizard-step" data-step="3">
+            <span class="eyebrow">Step 3</span>
+            <h2>Set payout rules.</h2>
+            <div class="form-grid">
+              <label>Commission<input name="commission" value="12% per redeemed bill" /></label>
+              <label>Bonus payout<input name="bonus" value="₹50 per verified visit" /></label>
+              <label>Campaign budget<input name="budget" value="₹1,00,000" /></label>
+            </div>
+          </section>
+
+          <section class="wizard-step" data-step="4">
+            <span class="eyebrow">Step 4</span>
+            <h2>Select attribution methods.</h2>
+            <div class="check-grid">
+              <label><input type="checkbox" checked data-track="QR tracking" /> QR tracking</label>
+              <label><input type="checkbox" checked data-track="Coupon attribution" /> Coupon attribution</label>
+              <label><input type="checkbox" checked data-track="WhatsApp clicks" /> WhatsApp clicks</label>
+              <label><input type="checkbox" data-track="UTM links" /> UTM links</label>
+              <label><input type="checkbox" checked data-track="Offline visit verification" /> Offline visit verification</label>
+            </div>
+          </section>
+
+          <section class="wizard-step" data-step="5">
+            <span class="eyebrow">Step 5</span>
+            <h2>Review campaign brief.</h2>
+            <div class="review-card" id="reviewCard"></div>
+          </section>
+
+          <div class="wizard-actions">
+            <button class="secondary-button" type="button" id="backButton">Back</button>
+            <button class="primary-button" type="button" id="nextButton">Next</button>
+          </div>
+        </form>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="campaign-wizard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UrbanBrew Offer | Pipplr Scan</title>
+    <meta
+      name="description"
+      content="Customer QR scan and conversion page for Pipplr campaigns with coupon redemption, WhatsApp lead capture, and offline attribution."
+    />
+    <link rel="stylesheet" href="scan.css" />
+  </head>
+  <body>
+    <main class="scan-shell">
+      <section class="offer-card">
+        <div class="brand-row">
+          <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+          <span class="status-pill">Tracked scan</span>
+        </div>
+
+        <div class="offer-hero">
+          <span class="eyebrow">UrbanBrew Kochi</span>
+          <h1>Get 12% off your weekend bill.</h1>
+          <p>
+            This offer is tracked for Aisha K. Scan attribution, coupon redemption, WhatsApp inquiry,
+            and store visit verification happen through Pipplr.
+          </p>
+        </div>
+
+        <div class="coupon-box">
+          <span>Creator coupon</span>
+          <strong>URBAN12</strong>
+          <button type="button" id="copyCoupon">Copy Coupon</button>
+        </div>
+
+        <div class="conversion-tabs" role="tablist" aria-label="Conversion action">
+          <button class="active" type="button" data-mode="visit">Store Visit</button>
+          <button type="button" data-mode="lead">WhatsApp Lead</button>
+          <button type="button" data-mode="bill">Bill Upload</button>
+        </div>
+
+        <form class="conversion-form" id="conversionForm">
+          <div class="dynamic-fields" id="dynamicFields"></div>
+          <button class="primary-button" type="submit" id="submitConversion">Verify Visit</button>
+        </form>
+
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </section>
+
+      <aside class="attribution-panel">
+        <span class="eyebrow">Attribution</span>
+        <div class="creator-mini">
+          <span class="avatar">AK</span>
+          <div>
+            <strong>Aisha K.</strong>
+            <small>Kochi · Food creator · Trust 98</small>
+          </div>
+        </div>
+        <div class="tracking-list">
+          <div><span>Campaign</span><strong>UrbanBrew Weekend Pass</strong></div>
+          <div><span>Creator code</span><strong>AISHA-KOCHI-24</strong></div>
+          <div><span>Scan source</span><strong>QR · Instagram story</strong></div>
+          <div><span>Reward rule</span><strong>12% coupon + visit commission</strong></div>
+        </div>
+      </aside>
+    </main>
+
+    <script src="scan.js"></script>
+  </body>
+</html>

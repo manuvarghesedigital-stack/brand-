@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Onboarding</title>
+    <meta
+      name="description"
+      content="Join Pipplr as a brand, creator, or agency and start creator commerce onboarding."
+    />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-hero">
+        <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+        <div>
+          <span class="eyebrow">Creator commerce access</span>
+          <h1>Start with the right workspace.</h1>
+          <p>
+            Choose your role, complete onboarding, and enter the dashboard that matches how you use Pipplr.
+          </p>
+        </div>
+        <div class="signal-grid">
+          <article><strong>QR</strong><span>offline attribution</span></article>
+          <article><strong>₹</strong><span>creator payouts</span></article>
+          <article><strong>WA</strong><span>lead tracking</span></article>
+        </div>
+      </section>
+
+      <section class="auth-card" aria-live="polite">
+        <div class="auth-tabs" role="tablist" aria-label="Authentication method">
+          <button class="active" type="button" data-auth-tab="email">Email</button>
+          <button type="button" data-auth-tab="google">Google</button>
+          <button type="button" data-auth-tab="whatsapp">WhatsApp</button>
+        </div>
+
+        <form class="login-form" id="loginForm">
+          <label>
+            Email or WhatsApp
+            <input type="text" name="contact" placeholder="hello@brand.com or +91..." required />
+          </label>
+          <button class="primary-button" type="submit">Continue</button>
+        </form>
+
+        <div class="role-step" id="roleStep" hidden>
+          <span class="eyebrow">Choose role</span>
+          <h2>What are you joining as?</h2>
+          <div class="role-grid">
+            <button type="button" data-role="brand">
+              <strong>Brand</strong>
+              <span>Launch campaigns and track conversions</span>
+            </button>
+            <button type="button" data-role="creator">
+              <strong>Creator</strong>
+              <span>Apply, promote, and earn payouts</span>
+            </button>
+            <button type="button" data-role="agency">
+              <strong>Agency</strong>
+              <span>Manage multiple brands and city networks</span>
+            </button>
+          </div>
+        </div>
+
+        <form class="onboarding-form" id="onboardingForm" hidden>
+          <div>
+            <span class="eyebrow" id="roleEyebrow">Onboarding</span>
+            <h2 id="roleTitle">Complete setup</h2>
+          </div>
+          <div class="form-grid" id="dynamicFields"></div>
+          <button class="primary-button" type="submit" id="finishButton">Enter dashboard</button>
+        </form>
+
+        <p class="form-note" id="formNote"></p>
+      </section>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

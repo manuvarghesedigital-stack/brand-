@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Analytics</title>
+    <meta
+      name="description"
+      content="Pipplr analytics dashboard for ROI, creator performance, city performance, clicks, leads, conversions, QR scans, coupon redemptions, and WhatsApp inquiries."
+    />
+    <link rel="stylesheet" href="analytics.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="brand-dashboard.html">Brand</a>
+        <a href="agency-dashboard.html">Agency</a>
+        <a href="campaign-detail.html">Campaign</a>
+      </nav>
+      <button class="primary-button" type="button" id="exportReport">Export Report</button>
+    </header>
+
+    <main>
+      <section class="analytics-hero">
+        <div>
+          <span class="eyebrow">Analytics</span>
+          <h1>Measure creator commerce like a revenue channel.</h1>
+          <p>
+            Compare creators, cities, channels, and campaign outcomes across QR scans, coupons,
+            WhatsApp leads, offline visits, and payout efficiency.
+          </p>
+        </div>
+        <aside class="filter-card">
+          <label>
+            Report range
+            <select id="rangeSelect">
+              <option>This week</option>
+              <option>This month</option>
+              <option>Last 90 days</option>
+            </select>
+          </label>
+          <label>
+            City
+            <select id="citySelect">
+              <option>All cities</option>
+              <option>Kochi</option>
+              <option>Bangalore</option>
+              <option>London</option>
+            </select>
+          </label>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>Clicks</span><strong id="clicksMetric">48.2K</strong><small>creator links and UTMs</small></article>
+        <article><span>Leads</span><strong id="leadsMetric">12.6K</strong><small>WhatsApp and forms</small></article>
+        <article><span>Conversions</span><strong id="conversionsMetric">3,842</strong><small>sales, visits, bookings</small></article>
+        <article><span>ROI</span><strong id="roiMetric">5.3x</strong><small>after creator payouts</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Funnel</span><h2>Channel performance</h2></div>
+            <button class="text-button" type="button" id="toggleChart">Show revenue</button>
+          </div>
+          <div class="bar-chart" id="barChart">
+            <div style="--h: 88%"><span>QR</span></div>
+            <div style="--h: 74%"><span>Coupon</span></div>
+            <div style="--h: 81%"><span>WA</span></div>
+            <div style="--h: 56%"><span>UTM</span></div>
+            <div style="--h: 69%"><span>Visit</span></div>
+          </div>
+        </article>
+
+        <article class="panel creator-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Creators</span><h2>Top performers</h2></div>
+          </div>
+          <div class="rank-table">
+            <div class="rank-row header"><span>Creator</span><span>City</span><span>Revenue</span><span>ROI</span></div>
+            <div class="rank-row"><a href="creator-profile.html">Aisha K.</a><span>Kochi</span><strong>₹2.8L</strong><span>6.2x</span></div>
+            <div class="rank-row"><span>Dev N.</span><span>Bangalore</span><strong>₹2.1L</strong><span>5.4x</span></div>
+            <div class="rank-row"><span>Maya R.</span><span>London</span><strong>£4.2K</strong><span>4.8x</span></div>
+          </div>
+        </article>
+
+        <article class="panel city-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Cities</span><h2>Market performance</h2></div>
+          </div>
+          <div class="city-list">
+            <div><span>Kochi</span><strong>₹3.1L</strong><small>412 verified visits</small></div>
+            <div><span>Bangalore</span><strong>₹2.7L</strong><small>338 verified visits</small></div>
+            <div><span>London</span><strong>£3.8K</strong><small>121 verified leads</small></div>
+          </div>
+        </article>
+
+        <article class="panel payout-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Payout efficiency</span><h2>Commission health</h2></div>
+          </div>
+          <div class="health-list">
+            <div><span>Approved payout rate</span><strong>91%</strong></div>
+            <div><span>Exception rate</span><strong>3.2%</strong></div>
+            <div><span>Avg settlement time</span><strong>3.8 days</strong></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="analytics.js"></script>
+  </body>
+</html>

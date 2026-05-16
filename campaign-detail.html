@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Campaign Detail</title>
+    <link rel="stylesheet" href="campaign-detail.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="brand-dashboard.html">Brand Dashboard</a>
+        <a href="creator-dashboard.html">Creator Dashboard</a>
+        <a href="admin-dashboard.html">Admin</a>
+        <a href="analytics.html">Analytics</a>
+      </nav>
+      <button class="primary-button" type="button" id="publishCampaign">Publish Campaign</button>
+    </header>
+
+    <main>
+      <section class="campaign-hero">
+        <div>
+          <span class="eyebrow">Campaign detail</span>
+          <h1>UrbanBrew Weekend Pass</h1>
+          <p>
+            Drive verified cafe visits and coupon redemptions through Kochi food creators, campus ambassadors,
+            and local city pages.
+          </p>
+          <div class="hero-actions">
+            <button class="secondary-button" type="button" id="copyCampaignLink">Copy Campaign Link</button>
+            <button class="secondary-button" type="button" id="downloadAssets">Download Creator Assets</button>
+          </div>
+        </div>
+        <aside class="campaign-status">
+          <span class="status-pill">Active</span>
+          <div><span>Budget used</span><strong>₹1.84L / ₹3.2L</strong></div>
+          <div><span>Campaign window</span><strong>May 16 - Jun 16</strong></div>
+          <div><span>Primary outcome</span><strong>Verified store visit</strong></div>
+        </aside>
+      </section>
+
+      <section class="metric-grid">
+        <article><span>QR scans</span><strong>12,486</strong><small>creator-specific</small></article>
+        <article><span>Coupon redemptions</span><strong>1,248</strong><small>URBAN12 tracked</small></article>
+        <article><span>WhatsApp leads</span><strong>2,731</strong><small>click-to-chat</small></article>
+        <article><span>Verified visits</span><strong>846</strong><small>offline attribution</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Rules</span><h2>Payout and eligibility</h2></div></div>
+          <div class="rules-list">
+            <div><span>Payout</span><strong>12% bill commission + ₹50 verified visit</strong></div>
+            <div><span>Creator eligibility</span><strong>Kochi or Thrissur · Food/campus niche · Trust 80+</strong></div>
+            <div><span>Verification</span><strong>QR scan + bill upload or POS confirmation</strong></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Tracking</span><h2>Attribution assets</h2></div>
+            <button class="text-button" type="button" id="refreshAssets">Refresh</button>
+          </div>
+          <div class="asset-grid">
+            <div><span>Coupon</span><strong>URBAN12</strong><button type="button" data-copy="URBAN12">Copy</button></div>
+            <div><span>Creator link</span><a href="scan.html"><strong>pipplr.com/r/aisha</strong></a><button type="button" data-copy="https://pipplr.com/r/aisha">Copy</button></div>
+            <div><span>WhatsApp CTA</span><strong>wa.me/urbanbrew</strong><button type="button" data-copy="https://wa.me/urbanbrew">Copy</button></div>
+          </div>
+        </article>
+
+        <article class="panel creator-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Creators</span><h2>Approved performers</h2></div>
+            <span class="count-pill">94 active</span>
+          </div>
+          <div class="creator-table">
+            <div class="creator-row header"><span>Creator</span><span>City</span><span>Revenue</span><span>Status</span></div>
+            <div class="creator-row"><a href="creator-profile.html"><strong>Aisha K.</strong></a><span>Kochi</span><span>₹2.8L</span><button type="button">View</button></div>
+            <div class="creator-row"><strong>Dev N.</strong><span>Bangalore</span><span>₹2.1L</span><button type="button">View</button></div>
+            <div class="creator-row"><strong>Riya M.</strong><span>Thrissur</span><span>₹1.4L</span><button type="button">View</button></div>
+          </div>
+        </article>
+
+        <article class="panel conversion-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Conversions</span><h2>Verification queue</h2></div></div>
+          <div class="conversion-list">
+            <div><strong>Bill #UB-2841</strong><span>Aisha K. · ₹1,840 · QR + coupon</span><button type="button">Verify</button></div>
+            <div><strong>WhatsApp lead #492</strong><span>Dev N. · group booking inquiry</span><button type="button">Verify</button></div>
+            <div><strong>Store visit #811</strong><span>Riya M. · staff confirmed</span><button type="button">Verify</button></div>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Performance</span><h2>Channel mix</h2></div></div>
+          <div class="bar-chart">
+            <div style="--h: 78%"><span>QR</span></div>
+            <div style="--h: 62%"><span>Coupon</span></div>
+            <div style="--h: 84%"><span>WA</span></div>
+            <div style="--h: 52%"><span>UTM</span></div>
+            <div style="--h: 69%"><span>Visit</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="campaign-detail.js"></script>
+  </body>
+</html>

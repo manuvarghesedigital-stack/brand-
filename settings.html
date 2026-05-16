@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Settings & Integrations</title>
+    <meta
+      name="description"
+      content="Pipplr settings for integrations, payment providers, social accounts, API keys, notifications, POS systems, and workspace preferences."
+    />
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Pipplr</span></a>
+      <nav>
+        <a href="brand-dashboard.html">Brand</a>
+        <a href="creator-dashboard.html">Creator</a>
+        <a href="agency-dashboard.html">Agency</a>
+      </nav>
+      <button class="primary-button" type="button" id="saveSettings">Save Settings</button>
+    </header>
+
+    <main>
+      <section class="settings-hero">
+        <div>
+          <span class="eyebrow">Settings and integrations</span>
+          <h1>Connect the tools that make attribution real.</h1>
+          <p>
+            Manage social channels, WhatsApp tracking, payment providers, POS systems, API keys,
+            notifications, and workspace preferences.
+          </p>
+        </div>
+        <aside class="workspace-card">
+          <span>Workspace</span>
+          <strong>UrbanBrew Kochi</strong>
+          <small>Brand workspace · Growth team plan</small>
+        </aside>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Socials</span><h2>Creator account connections</h2></div></div>
+          <div class="integration-list">
+            <div><span>Instagram</span><strong>Connected</strong><button type="button">Update Instagram</button></div>
+            <div><span>TikTok</span><strong>Not connected</strong><button type="button">Connect TikTok</button></div>
+            <div><span>YouTube</span><strong>Connected</strong><button type="button">Update YouTube</button></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Messaging</span><h2>WhatsApp lead tracking</h2></div></div>
+          <div class="setting-list">
+            <label>Business number<input value="+91 98765 43210" /></label>
+            <label>Default inquiry message<input value="Hi UrbanBrew, I came from Pipplr" /></label>
+            <button class="secondary-button" type="button" id="testWhatsApp">Test WhatsApp Link</button>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">Payments</span><h2>Payment providers</h2></div></div>
+          <div class="integration-list">
+            <div><span>Razorpay</span><strong>Live</strong><button type="button">Manage</button></div>
+            <div><span>Stripe</span><strong>Test mode</strong><button type="button">Manage</button></div>
+            <div><span>UPI payouts</span><strong>Enabled</strong><button type="button">Manage</button></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">POS and API</span><h2>Offline attribution</h2></div></div>
+          <div class="setting-list">
+            <label>POS provider<input value="Manual upload / CSV" /></label>
+            <label>Webhook endpoint<input value="https://api.pipplr.com/webhooks/urbanbrew" /></label>
+            <button class="secondary-button" type="button" id="copyApiKey">Copy API Key</button>
+          </div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-heading"><div><span class="eyebrow">Notifications</span><h2>Workspace alerts</h2></div></div>
+          <div class="toggle-grid">
+            <label><input type="checkbox" checked /> New creator applications</label>
+            <label><input type="checkbox" checked /> Conversion verification queue</label>
+            <label><input type="checkbox" checked /> Payout exceptions</label>
+            <label><input type="checkbox" /> Weekly city performance digest</label>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    <script src="settings.js"></script>
+  </body>
+</html>
