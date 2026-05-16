@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pipplr Brand Dashboard</title>
+    <meta
+      name="description"
+      content="Pipplr brand dashboard for creator campaigns, attribution, approvals, payouts, and city performance."
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <aside class="sidebar" aria-label="Brand dashboard navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">P</span>
+        <span>Pipplr</span>
+      </a>
+      <nav>
+        <a class="active" href="#overview">Overview</a>
+        <a href="#campaigns">Campaigns</a>
+        <a href="#creators">Creators</a>
+        <a href="#tracking">Tracking</a>
+        <a href="#payouts">Payouts</a>
+      </nav>
+      <div class="workspace-card">
+        <span>Workspace</span>
+        <strong>UrbanBrew Kochi</strong>
+        <small>Growth team plan</small>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Brand dashboard</span>
+          <h1>Campaign Command Center</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Search dashboard" title="Search"></button>
+          <button class="secondary-button" type="button">Export Report</button>
+          <button class="primary-button" type="button" id="newCampaign">New Campaign</button>
+        </div>
+      </header>
+
+      <section class="hero-band" id="overview">
+        <div>
+          <span class="status-pill">Live campaign</span>
+          <h2>Cafe Weekend Pass</h2>
+          <p>
+            94 approved creators are driving QR scans, coupon redemptions, WhatsApp leads, and store visits
+            across Kochi and Thrissur.
+          </p>
+        </div>
+        <div class="hero-metrics" aria-label="Campaign performance summary">
+          <article><span>Revenue tracked</span><strong>₹8.42L</strong><small>+28% vs last week</small></article>
+          <article><span>ROAS</span><strong>5.3x</strong><small>creator payouts included</small></article>
+          <article><span>Pending payout</span><strong>₹92K</strong><small>settles Friday</small></article>
+        </div>
+      </section>
+
+      <section class="metric-grid" aria-label="Attribution metrics">
+        <article>
+          <span>QR scans</span>
+          <strong>12,486</strong>
+          <div class="meter"><span style="width: 82%"></span></div>
+        </article>
+        <article>
+          <span>Coupon sales</span>
+          <strong>1,248</strong>
+          <div class="meter coral"><span style="width: 67%"></span></div>
+        </article>
+        <article>
+          <span>WhatsApp leads</span>
+          <strong>2,731</strong>
+          <div class="meter sky"><span style="width: 74%"></span></div>
+        </article>
+        <article>
+          <span>Store visits</span>
+          <strong>846</strong>
+          <div class="meter gold"><span style="width: 58%"></span></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel campaign-builder" id="campaigns">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Campaign setup</span>
+              <h3>Create performance campaign</h3>
+            </div>
+            <span class="draft-pill">Draft</span>
+          </div>
+          <form class="builder-form">
+            <label>
+              Objective
+              <select>
+                <option>Coupon redemption</option>
+                <option>WhatsApp inquiry</option>
+                <option>Store visit</option>
+                <option>Lead generation</option>
+              </select>
+            </label>
+            <label>
+              Target cities
+              <input value="Kochi, Thrissur, Bangalore" />
+            </label>
+            <label>
+              Creator payout
+              <input value="12% commission + ₹50 verified visit" />
+            </label>
+            <label>
+              Approval mode
+              <select>
+                <option>Manual approval</option>
+                <option>Trust score 90+ auto approve</option>
+              </select>
+            </label>
+          </form>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Attribution</span>
+              <h3>Conversions by channel</h3>
+            </div>
+            <button class="text-button" type="button">This week</button>
+          </div>
+          <div class="bar-chart" aria-label="Conversions by channel chart">
+            <div style="--h: 72%"><span>QR</span></div>
+            <div style="--h: 58%"><span>Coupon</span></div>
+            <div style="--h: 81%"><span>WhatsApp</span></div>
+            <div style="--h: 44%"><span>UTM</span></div>
+            <div style="--h: 63%"><span>Visits</span></div>
+          </div>
+        </article>
+
+        <article class="panel creator-approvals" id="creators">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Creator recruitment</span>
+              <h3>Pending approvals</h3>
+            </div>
+            <span class="count-pill">18 waiting</span>
+          </div>
+          <div class="creator-list">
+            <div class="creator-row">
+              <span class="avatar">AK</span>
+              <div><strong>Aisha K.</strong><small>Kochi · Food · 18.2K audience</small></div>
+              <button type="button">Approve</button>
+            </div>
+            <div class="creator-row">
+              <span class="avatar">DN</span>
+              <div><strong>Dev N.</strong><small>Bangalore · Campus · 11.8K audience</small></div>
+              <button type="button">Approve</button>
+            </div>
+            <div class="creator-row">
+              <span class="avatar">MR</span>
+              <div><strong>Maya R.</strong><small>London · Travel · 24.6K audience</small></div>
+              <button type="button">Approve</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel tracking-panel" id="tracking">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Tracking kit</span>
+              <h3>Creator assets</h3>
+            </div>
+          </div>
+          <div class="tracking-kit">
+            <div class="qr-code" aria-label="QR code preview">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div>
+              <strong>PIP-URBAN-24</strong>
+              <small>QR, coupon, UTM, and WhatsApp link generated per creator.</small>
+              <button class="secondary-button" type="button">Generate Batch</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel city-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">City performance</span>
+              <h3>Market comparison</h3>
+            </div>
+          </div>
+          <div class="city-table">
+            <div><span>Kochi</span><strong>₹3.1L</strong><small>412 visits</small></div>
+            <div><span>Bangalore</span><strong>₹2.7L</strong><small>338 visits</small></div>
+            <div><span>Thrissur</span><strong>₹1.4L</strong><small>196 visits</small></div>
+            <div><span>London</span><strong>£3.8K</strong><small>121 leads</small></div>
+          </div>
+        </article>
+
+        <article class="panel payout-panel" id="payouts">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Payouts</span>
+              <h3>Creator commissions</h3>
+            </div>
+            <span class="status-pill">Ready</span>
+          </div>
+          <div class="payout-total">
+            <span>Approved for payout</span>
+            <strong>₹92,450</strong>
+          </div>
+          <div class="payout-actions">
+            <button class="primary-button" type="button">Approve Payouts</button>
+            <button class="secondary-button" type="button">Review Exceptions</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <dialog class="campaign-dialog" id="campaignDialog">
+      <form method="dialog">
+        <button class="modal-close" aria-label="Close new campaign dialog"></button>
+        <span class="eyebrow">New campaign</span>
+        <h2>Launch a creator campaign</h2>
+        <p>Choose the outcome you want Pipplr to track first.</p>
+        <div class="campaign-options">
+          <button value="lead">Lead generation</button>
+          <button value="sale">Sales and coupons</button>
+          <button value="visit">Store visits</button>
+          <button value="whatsapp">WhatsApp inquiries</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
